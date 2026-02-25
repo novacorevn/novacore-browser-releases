@@ -15,12 +15,40 @@
     :root {
       --docsifytabs-border-color: #ededed;
       --docsifytabs-tab-highlight-color: #42b983;
+      --theme-color: #42b983;
     }
     .sidebar {
       background-color: var(--sidebar-background);
+      border-right: 1px solid var(--border-color);
+    }
+    .sidebar-nav {
+      padding-left: 15px;
+    }
+    /* Mạnh mẽ hơn cho sidebar */
+    .sidebar-nav ul li a {
+      font-size: 15px !important;
+      font-weight: 500 !important;
+      color: var(--textColor) !important;
+    }
+    .sidebar-nav ul li.active > a {
+      color: var(--accent) !important;
+      font-weight: 700 !important;
+    }
+    /* Các sub-item (Heading level 2, 3) */
+    .sidebar-nav ul li ul li a {
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      opacity: 0.8;
     }
     .markdown-section {
       max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 45px 40px;
+    }
+    /* Cải thiện typography nội dung */
+    .markdown-section h1, .markdown-section h2, .markdown-section h3 {
+      font-weight: 600;
+      color: var(--textColor);
     }
   </style>
 </head>

@@ -103,9 +103,18 @@ Bạn không cần biết code để chọn phần tử web:
 2. Trên màn hình Automation, nhấn **"Inspect Browser"**.
 3. **Thông minh**: Nếu trình duyệt chưa chạy, NovaCore sẽ tự động khởi chạy hồ
    sơ và hiển thị trạng thái **"Đang kết nối..."**.
-4. Di chuyển chuột trên trình duyệt và click vào nút/ô nhập liệu bạn muốn.
-   NovaCore sẽ tự động tạo Node tương ứng cho bạn. Trạng thái chọn sẽ được hiển
-   thị bằng khung vàng (hover) và khung xanh lá (click).
+4. **Chế độ Chọn chính xác (Precision Mode)**:
+   - **Mặc định**: Tự động tìm phần tử tương tác gần nhất (nút, ô nhập).
+   - **Deep Selection (Giữ phím `Alt`)**: Chọn chính xác phần tử nhỏ nhất dưới
+     con trỏ (hữu ích khi muốn chọn chính xác biểu tượng hoặc văn bản lồng sâu).
+   - **Parent Selection (Giữ phím `Shift`)**: Tự động mở rộng vùng chọn lên phần
+     tử cha bao quanh.
+5. **Khớp văn bản thông minh**: Chiến lược **"Khớp văn bản"** đã được tối ưu để
+   tự động gộp nội dung lồng nhau và đánh chỉ số tự động (Indexed XPath), giúp
+   quy trình chạy cực kỳ ổn định trên Google Search.
+6. **Đặt tên biến ($vars)**: Khi chọn hành động trích xuất, bạn có thể đặt tên
+   cho biến kết quả ngay trong cửa sổ Inspect để sử dụng ở các bước sau.
+7. Trạng thái chọn được hiển thị bằng khung vàng (hover) và xanh lá (click).
 
 ---
 

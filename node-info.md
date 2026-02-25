@@ -221,8 +221,12 @@ Dưới đây là các params chi tiết của component này:
     mẽ hơn khi cấu trúc web phức tạp.
 - **Mẹo:** Bạn có thể dùng công cụ "Pick" (hình kính lúp/mũi tên) hoặc nhấn
   **"Inspect Browser"** trên menu chính để trỏ trực tiếp vào web và lấy Selector
-  tự động. Tính năng này sẽ tự động khởi chạy trình duyệt nếu hồ sơ của bạn chưa
-  mở.
+  tự động.
+  - **Chế độ Chọn chính xác (Precision Mode)**:
+    - Giữ **Alt**: Để chọn phần tử sâu nhất (ví dụ: Icon bên trong Button).
+    - Giữ **Shift**: Để chọn phần tử cha (ví dụ: bọc toàn bộ khối Layout).
+  - **Dịch vụ Khớp văn bản**: NovaCore sử dụng kỹ thuật `normalize-space` để gộp
+    text lồng nhau, giúp Selector theo văn bản cực kỳ ổn định.
 
 ### **2\. Button (Nút chuột)**
 
@@ -244,7 +248,7 @@ Dưới đây là các params chi tiết của component này:
 
 - **Đơn vị:** Miligiây (ms).
 - **Mô tả:** Khoảng thời gian từ lúc chuột "nhấn xuống" đến lúc "thả ra".
-- **Tác dụng:** Người thật thường nhấn giữ khoảng 50ms \- 150ms. Nếu bạn để là
+- **Tác dụng:** Người thật thường nhấn giữ khoảng 50ms - 150ms. Nếu bạn để là
   0ms, các hệ thống chống bot như Cloudflare có thể nhận diện là thao tác của
   máy.
 
@@ -290,7 +294,7 @@ Dưới đây là các params chi tiết của component này:
   để kéo Captcha, tham số này phải đủ dài để bao quát toàn bộ quá trình di
   chuyển.
 
-### **4\. Pressure / Force (Lực nhấn \- Tùy chọn ở một số bản nâng cao)**
+### **4\. Pressure / Force (Lực nhấn - Tùy chọn ở một số bản nâng cao)**
 
 - **Mô tả:** Một số hệ thống chống bot cao cấp có thể cảm nhận được áp lực nhấn
   (đặc biệt trên các thiết bị cảm ứng). Tham số này giúp giả lập độ mạnh nhẹ của
@@ -373,7 +377,7 @@ Tham số này xác định nơi bạn muốn "thả" vật thể ra.
 
 - **Đơn vị:** Miligiây (ms).
 - **Mô tả:** Tổng thời gian từ lúc bắt đầu nhấn đến lúc di chuyển tới đích.
-- **Ứng dụng:** Người thật thường mất khoảng 500ms \- 1500ms để kéo một mảnh
+- **Ứng dụng:** Người thật thường mất khoảng 500ms - 1500ms để kéo một mảnh
   ghép. Nếu kéo quá nhanh (dưới 100ms), hệ thống sẽ đánh dấu là hành vi bất
   thường.
 
@@ -437,7 +441,7 @@ Chỉ xuất hiện khi bạn chọn loại cuộn là **Amount**:
 - **Mô tả:** Xác định phím cụ thể mà bạn muốn trình duyệt thực hiện nhấn.
 - **Giá trị:** \* **Các phím văn bản:** `a`, `b`, `1`, `2`, `@`,...
   - **Các phím chức năng:** `Enter`, `Tab`, `Escape`, `Backspace`, `ArrowUp`,
-    `ArrowDown`, `Space`, `F1` \- `F12`.
+    `ArrowDown`, `Space`, `F1` - `F12`.
 - **Lưu ý:** Tên phím thường phải tuân theo chuẩn **KeyboardEvent Key Values**
   của Javascript.
 
@@ -481,6 +485,9 @@ Dưới đây là các params chi tiết của component này:
 
 - **Mô tả:** Định danh của ô nhập liệu mà bạn muốn điền văn bản vào.
 - **Giá trị:** CSS Selector hoặc XPath.
+  - **Mẹo**: Sử dụng phím **Alt** khi Inspect để chọn chính xác phần tử chứa văn
+    bản duy nhất mà bạn muốn lấy. Hệ thống tự động đánh chỉ số (e.g. `(...)[1]`)
+    nếu văn bản bị trùng trên trang.
 - **Lưu ý:** Bạn nên đảm bảo phần tử này là một ô có thể nhập liệu (thẻ `input`,
   `textarea` hoặc các thẻ có thuộc tính `contenteditable="true"`).
 
@@ -495,7 +502,7 @@ Dưới đây là các params chi tiết của component này:
 
 Đây là tham số cực kỳ quan trọng để "vượt rào" các hệ thống chống bot:
 
-- **Giá trị:** Thường là một dải (Min \- Max) tính bằng miligiây (ms). Ví dụ:
+- **Giá trị:** Thường là một dải (Min - Max) tính bằng miligiây (ms). Ví dụ:
   `50 - 200`.
 - **Tác dụng:** Trình duyệt sẽ nghỉ một khoảng ngẫu nhiên giữa mỗi chữ cái.
   Người thật không bao giờ gõ với tốc độ đều tắp như máy.
@@ -550,7 +557,7 @@ dùng có thấy không".
   - **In DOM:** Chỉ cần phần tử có trong mã HTML (dù nó đang bị ẩn bằng
     `display:none`).
   - **Visible:** Phần tử phải hiển thị trên màn hình, có kích thước
-    (width/height \> 0\) và người dùng có thể tương tác được.
+    (width/height > 0\) và người dùng có thể tương tác được.
 
 ### **4\. Timeout (Thời gian chờ)**
 
@@ -639,8 +646,9 @@ Một số phiên bản nâng cao cho phép bạn chọn cách lấy URL:
 
 - **Mô tả:** Định danh của phần tử chứa văn bản bạn muốn lấy.
 - **Giá trị:** CSS Selector hoặc XPath.
-- **Ví dụ:** Nếu bạn muốn lấy giá sản phẩm, bạn có thể dùng selector như
-  `.product-price` hoặc `//span[@id='price']`.
+  - **Mẹo**: Sử dụng phím **Alt** khi Inspect để chọn chính xác phần tử chứa văn
+    bản duy nhất mà bạn muốn lấy. Hệ thống tự động đánh chỉ số (e.g. `(...)[1]`)
+    nếu văn bản bị trùng trên trang.
 
 ### **2\. Variable Name (Tên biến lưu trữ)**
 

@@ -1,3 +1,1 @@
 - [Trang chủ](/)
-- [GitHub](https://github.com/novacorevn/antidetect-browser)
-- [Download](https://github.com/novacorevn/antidetect-browser/releases)

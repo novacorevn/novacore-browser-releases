@@ -98,6 +98,10 @@ Truy cập mục **"Automation"** để bắt đầu:
     phần phức tạp.
   - `AI (GPT/Gemini)`: Sử dụng trí tuệ nhân tạo để xử lý nội dung.
 
+- **Dừng kịch bản (Stop Flow)**: Khi kịch bản đang chạy, nút "Run Flow" sẽ
+  chuyển thành nút **"Stop Flow"** màu đỏ. Bạn có thể nhấn vào đó để dừng ngay
+  lập tức quy trình.
+
 ### 4.2 Chế độ Rà soát (Inspector)
 
 Bạn không cần biết code để chọn phần tử web:

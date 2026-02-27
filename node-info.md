@@ -1914,8 +1914,34 @@ nhất.
 
 ---
 
-# Thẻ 5
+## **- Xử lý Dialog:**
 
-- App đặt xe
-- Người lái xe, người đặt xe\
-  Thuật toán phù hợp bắn người đặt xe cho người lái, tìm kiếm xe, phân bổ lái xe
+### **1. Action (Hành động)**
+
+- **Mô tả:** Quyết định sẽ làm gì khi có hộp thoại hệ thống xuất hiện.
+- **Lựa chọn:**
+  - **Accept:** Đồng ý (tương đương nút OK).
+  - **Dismiss:** Hủy bỏ (tương đương nút Cancel hoặc phím ESC).
+
+### **2. Prompt Text (Nội dung nhập)**
+
+- **Mô tả:** Nếu hộp thoại là dạng yêu cầu nhập dữ liệu (`window.prompt`), hãy
+  điền nội dung bạn muốn nhập vào đây.
+- **Giá trị:** Văn bản hoặc biến số `{{variable}}`.
+
+---
+
+## **- Chạy JavaScript (Trình duyệt):**
+
+### **1. JavaScript Code (Mã JS)**
+
+- **Mô tả:** Đoạn mã JavaScript sẽ được thực thi trực tiếp bên trong trang web
+  (ngữ cảnh DOM).
+- **Ứng dụng:**
+  - Click vào các phần tử ẩn hoặc SVG khó chọn.
+  - Xóa các lớp phủ (overlay), quảng cáo che khuất màn hình.
+  - Thực hiện các logic tính toán phức tạp trên giao diện người dùng.
+- **Mẹo:** Sử dụng `document.querySelector` để tìm phần tử và `.click()` để
+  nhấn.
+
+---

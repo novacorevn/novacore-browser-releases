@@ -90,9 +90,12 @@ Truy cập mục **"Automation"** để bắt đầu:
 - **Kéo-Thả**: Kéo các node từ thanh công cụ bên trái vào màn hình thiết kế.
 - **Kết nối**: Nối các node lại với nhau để tạo thành dòng chảy hành động.
 - **Node phổ biến**:
-  - `Click`: Click vào nút trên trang web.
   - `Type`: Nhập dữ liệu, văn bản.
   - `Wait`: Chờ trang load hoặc chờ một khoảng thời gian.
+  - `Xử lý Dialog`: Tự động đồng ý/hủy các hộp thoại "Rời khỏi trang" hoặc cảnh
+    báo hệ thống.
+  - `Chạy JavaScript`: Thực thi code JS trực tiếp trên trang để xử lý các thành
+    phần phức tạp.
   - `AI (GPT/Gemini)`: Sử dụng trí tuệ nhân tạo để xử lý nội dung.
 
 ### 4.2 Chế độ Rà soát (Inspector)
@@ -112,8 +115,12 @@ Bạn không cần biết code để chọn phần tử web:
 5. **Khớp văn bản thông minh**: Chiến lược **"Khớp văn bản"** đã được tối ưu để
    tự động gộp nội dung lồng nhau và đánh chỉ số tự động (Indexed XPath), giúp
    quy trình chạy cực kỳ ổn định trên Google Search.
-6. **Đặt tên biến ($vars)**: Khi chọn hành động trích xuất, bạn có thể đặt tên
-   cho biến kết quả ngay trong cửa sổ Inspect để sử dụng ở các bước sau.
+6. **Đặt tên biến & Kết quả ($vars, $node)**:
+   - Khi chọn hành động trích xuất, bạn có thể đặt tên biến kết quả ngay trong
+     cửa sổ Inspect.
+   - **Gợi ý giá trị (Suggested Values)**: Bảng hỗ trợ này đã được dịch hoàn
+     chỉnh (**CÁC GIÁ TRỊ GỢI Ý**), giúp bạn dễ dàng chọn lại kết quả của các
+     bước trước đó như `{{ $node["Tên Node"].output }}`.
 7. Trạng thái chọn được hiển thị bằng khung vàng (hover) và xanh lá (click).
 
 ---
